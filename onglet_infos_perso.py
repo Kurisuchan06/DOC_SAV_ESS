@@ -1,7 +1,6 @@
 import tkinter as tk
 
 def create_onglet_infos_perso(notebook):
-    global entry_nom, entry_prenom
     # Créer le Frame pour l'onglet
     frame_infos_personnelles = tk.Frame(notebook)
     notebook.add(frame_infos_personnelles, text="Informations personnelles")
@@ -14,3 +13,6 @@ def create_onglet_infos_perso(notebook):
     tk.Label(frame_infos_personnelles, text="Prénom :").grid(row=1, column=0)
     entry_prenom = tk.Entry(frame_infos_personnelles)
     entry_prenom.grid(row=1, column=1)
+
+    # Retourner les widgets nécessaires pour l'accès depuis main.py
+    return entry_nom, entry_prenom
