@@ -40,7 +40,11 @@ def generer_document():
     # Ajouter les informations sur la formation
     doc.add_paragraph(f"Date d'entrée : {date_entree}")
     doc.add_paragraph(f"Date de fin : {date_fin}")
+    doc.add_paragraph(f"Durée totale : {duree_totale}")
     doc.add_paragraph(f"Rythme hebdomadaire : {rythme}")
+    doc.add_paragraph(f"Rythme en entreprise : {rythme_entreprise}")
+    doc.add_paragraph(f"Volume horaire : {duree_totale}")
+
 
     # Ajouter les compétences cochées
     doc.add_heading('Compétences', level=1)
