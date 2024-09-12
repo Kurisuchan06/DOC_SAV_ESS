@@ -1,7 +1,6 @@
 import tkinter as tk
 
 def create_onglet_competences(notebook):
-    global var_competence1, var_competence2
     # Créer le Frame pour l'onglet
     frame_competences = tk.Frame(notebook)
     notebook.add(frame_competences, text="Compétences")
@@ -12,3 +11,6 @@ def create_onglet_competences(notebook):
 
     tk.Checkbutton(frame_competences, text="Compétence 1", variable=var_competence1).grid(row=0, column=0)
     tk.Checkbutton(frame_competences, text="Compétence 2", variable=var_competence2).grid(row=1, column=0)
+
+    # Retourner les variables nécessaires
+    return var_competence1, var_competence2
