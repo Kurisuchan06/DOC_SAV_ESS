@@ -1,14 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
+from docx import Document
 from onglet_infos_perso import create_onglet_infos_perso
 from onglet_competences import create_onglet_competences
 from onglet_infos_formation import create_onglet_infos_formation
-from docx import Document
-from tkinter import messagebox
 
 # Fonction pour générer le document Word
 def generer_document():
-    # Récupérer les données des onglets
+    # Utiliser les variables globales pour accéder aux entrées des onglets
     nom = entry_nom.get()
     prenom = entry_prenom.get()
     date_entree = entry_date_entree.get()
@@ -48,10 +48,10 @@ root.title("Générateur de Document Word - Formation")
 notebook = ttk.Notebook(root)
 notebook.grid(row=0, column=0, padx=10, pady=10)
 
-# Appel aux fonctions pour ajouter les onglets
-create_onglet_infos_perso(notebook)
-create_onglet_competences(notebook)
-create_onglet_infos_formation(notebook)
+# Appel aux fonctions pour ajouter les onglets et récupérer les widgets
+entry_nom, entry_prenom = create_onglet_infos_perso(notebook)
+var_competence1, var_competence2 = create_onglet_competences(notebook)
+entry_date_entree, entry_date_fin, entry_rythme = create_onglet_infos_formation(notebook)
 
 # Bouton pour générer le document
 btn_generer = tk.Button(root, text="Générer le document", command=generer_document)
