@@ -5,15 +5,17 @@ from docx import Document
 from onglet_infos_perso import create_onglet_infos_perso
 from onglet_competences import create_onglet_competences
 from onglet_infos_formation import create_onglet_infos_formation
+entry_nom, entry_prenom, entry_adresse, entry_telephone, entry_email = create_onglet_infos_perso(notebook)
+
 
 # Fonction pour générer le document Word
 def generer_document():
     # Utiliser les variables globales pour accéder aux entrées des onglets
     nom = entry_nom.get()
     prenom = entry_prenom.get()
-    date_entree = entry_date_entree.get()
-    date_fin = entry_date_fin.get()
-    rythme = entry_rythme.get()
+    adresse = entry_adresse.get()
+    telephone = entry_telephone.get()
+    email = entry_email.get()
 
     competence1 = var_competence1.get()
     competence2 = var_competence2.get()
