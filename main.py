@@ -13,7 +13,7 @@ def generer_document():
     
     date_entree = entry_date_entree.get()
     date_fin = entry_date_fin.get()
-    duree_total = entry_duree_totale.get()
+    duree_totale = entry_duree_totale.get()
     rythme = entry_rythme.get()
     rythme_entreprise = entry_rythme_entreprise.get()
     volume_horaire = entry_horaire
