@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff6347; /* Couleur vive orange-rouge */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #ff6347;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding-bottom: 60px; /* Espace pour le footer */
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #20b2aa; /* Turquoise */
+    padding: 20px;
+    color: #fff;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3cb371; /* Vert plus foncé */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #ff6347; /* Même couleur que le header */
+    margin-bottom: 15px;
+}
+
+.content p, .content ul {
+    font-size: 1.2rem;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500; /* Couleur orange plus foncée */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #20b2aa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3cb371;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body.films {
+    background-image: url('films.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond pour rendre le texte lisible */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body.series {
+    background-image: url('series.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+body.jeux {
+    background-image: url('jeux.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Styles pour la notation d'étoiles */
+.star-rating {
+    font-size: 20px; /* Taille des étoiles */
+    color: gold; /* Couleur des étoiles */
+    font-family: Arial, sans-serif;
+}
+
+.star-rating-5::before {
+    content: "★★★★★"; /* 5 étoiles */
+}
+
+.star-rating-4::before {
+    content: "★★★★☆"; /* 4 étoiles */
+}
+
+.star-rating-3::before {
+    content: "★★★☆☆"; /* 3 étoiles */
+}
+
+.star-rating-2::before {
+    content: "★★☆☆☆"; /* 2 étoiles */
+}
+
+.star-rating-1::before {
+    content: "★☆☆☆☆"; /* 1 étoile */
+}
+
+.star-rating-0::before {
+    content: "☆☆☆☆☆"; /* 0 étoile */
+}
